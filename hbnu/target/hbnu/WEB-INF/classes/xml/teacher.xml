@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TeacherMapper">
+    <select id="tLogin" parameterType="java.lang.String" resultType="com.entity.Teacher">
+        select * from teacher where tnumber =#{tnumber };
+    </select>
+    <insert id="addCourse" parameterType="com.entity.Course">
+       insert into create_course (tnumber,time,course,info)values(#{tnumber},#{time},#{course},#{info});
+    </insert>
+    <select id="getAllCourses" parameterType="com.entity.Course" resultType="com.entity.Course">
+        select tnumber,time,course,info,id
+		from create_course;
+    </select>
+    <delete id="delBytime" parameterType="java.lang.String">
+        delete from create_course where id=#{id}
+    </delete>
+    <insert id="createDiscussion" parameterType="java.lang.String">
+       insert into create_discussion (date,title,content) values(#{time},#{title},#{content});
+    </insert>
+    <insert id="createQuestion" parameterType="com.entity.ClassTest">
+       insert into create_question values(#{title},#{itemA},#{itemB},#{itemC},#{itemD},#{answer},#{score});
+    </insert>
+    <select id="getDiscussion" parameterType="com.entity.Discussion" resultType="com.entity.Discussion">
+        select date,title,content
+		from create_discussion;
+    </select>
+</mapper>

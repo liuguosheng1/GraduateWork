@@ -47,8 +47,8 @@
     <!-- 对模型视图名称的解析,即在模型视图名称添加前后缀 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 查找视图页面的前缀和后缀 -->
-        <property name="prefix" value="/" />
-        <property name="suffix" value=".html" />
+        <property name="prefix" value="" />
+        <property name="suffix" value=".jsp" />
     </bean>
 
     <!--<!–对上传文件的支持，springMVC其实是用common-upload来实现 –>

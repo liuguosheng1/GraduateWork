@@ -62,7 +62,7 @@
 
   <!-- 访问根路径时的默认访问页面，从上到下匹配 -->
   <welcome-file-list>
-    <welcome-file>/index.jsp</welcome-file>
+    <welcome-file>/logon.jsp</welcome-file>
     <welcome-file>/index.html</welcome-file>
     <welcome-file>/reg.html</welcome-file>
   </welcome-file-list>
